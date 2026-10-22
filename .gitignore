@@ -1,0 +1,17 @@
+
+# Arquivos e pastas gerados pelo .NET
+bin/
+obj/
+
+# Configurações locais do Visual Studio
+.vs/
+*.user
+*.suo
+
+# Arquivos temporários
+*.tmp
+*.log
+
+# Configurações do sistema operacional
+Thumbs.db
+.DS_Store
