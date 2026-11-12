@@ -64,6 +64,7 @@
             btnCadastrarSala.TabIndex = 2;
             btnCadastrarSala.Text = "Cadastrar Sala";
             btnCadastrarSala.UseVisualStyleBackColor = true;
+            btnCadastrarSala.Click += btnCadastrarSala_Click;
             // 
             // btnGerenciarReservas
             // 
@@ -89,7 +90,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(982, 553);
+            ClientSize = new Size(999, 553);
             Controls.Add(btnRelatorios);
             Controls.Add(btnGerenciarReservas);
             Controls.Add(btnCadastrarSala);
