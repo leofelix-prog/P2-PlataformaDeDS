@@ -54,6 +54,7 @@
             btnConsultarSalas.TabIndex = 1;
             btnConsultarSalas.Text = "Consultar Salas";
             btnConsultarSalas.UseVisualStyleBackColor = true;
+            btnConsultarSalas.Click += btnConsultarSalas_Click;
             // 
             // btnCadastrarSala
             // 

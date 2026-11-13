@@ -14,5 +14,11 @@ namespace SalaDeReunioes
             FrmCadastroSala formulario = new FrmCadastroSala();
             formulario.ShowDialog();
         }
+
+        private void btnConsultarSalas_Click(object sender, EventArgs e)
+        {
+            FrmConsultarSalas formulario = new FrmConsultarSalas();
+            formulario.ShowDialog();
+        }
     }
 }
