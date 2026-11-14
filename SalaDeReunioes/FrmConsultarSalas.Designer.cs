@@ -33,6 +33,8 @@
             colNome = new DataGridViewTextBoxColumn();
             colAndar = new DataGridViewTextBoxColumn();
             colAssentos = new DataGridViewTextBoxColumn();
+            label2 = new Label();
+            txtPesquisarSala = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgvSalas).BeginInit();
             SuspendLayout();
             // 
@@ -53,13 +55,13 @@
             dgvSalas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvSalas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSalas.Columns.AddRange(new DataGridViewColumn[] { colNome, colAndar, colAssentos });
-            dgvSalas.Location = new Point(65, 108);
+            dgvSalas.Location = new Point(65, 145);
             dgvSalas.MultiSelect = false;
             dgvSalas.Name = "dgvSalas";
             dgvSalas.ReadOnly = true;
             dgvSalas.RowHeadersWidth = 51;
             dgvSalas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvSalas.Size = new Size(740, 355);
+            dgvSalas.Size = new Size(740, 318);
             dgvSalas.TabIndex = 1;
             // 
             // colNome
@@ -86,11 +88,30 @@
             colAssentos.Name = "colAssentos";
             colAssentos.ReadOnly = true;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(65, 109);
+            label2.Name = "label2";
+            label2.Size = new Size(102, 20);
+            label2.TabIndex = 2;
+            label2.Text = "Pesquisar Sala";
+            // 
+            // txtPesquisarSala
+            // 
+            txtPesquisarSala.Location = new Point(173, 106);
+            txtPesquisarSala.Name = "txtPesquisarSala";
+            txtPesquisarSala.Size = new Size(125, 27);
+            txtPesquisarSala.TabIndex = 3;
+            txtPesquisarSala.TextChanged += txtPesquisarSala_TextChanged;
+            // 
             // FrmConsultarSalas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(882, 503);
+            Controls.Add(txtPesquisarSala);
+            Controls.Add(label2);
             Controls.Add(dgvSalas);
             Controls.Add(label1);
             Name = "FrmConsultarSalas";
@@ -109,5 +130,7 @@
         private DataGridViewTextBoxColumn colNome;
         private DataGridViewTextBoxColumn colAndar;
         private DataGridViewTextBoxColumn colAssentos;
+        private Label label2;
+        private TextBox txtPesquisarSala;
     }
 }
