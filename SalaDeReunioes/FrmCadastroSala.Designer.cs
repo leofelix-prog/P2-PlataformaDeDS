@@ -36,7 +36,7 @@
             btnCadastrarSala = new Button();
             btnCancelar = new Button();
             txtQuantidadeAssentos = new TextBox();
-            cmbAndar = new ComboBox();
+            txtAndar = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -110,22 +110,19 @@
             txtQuantidadeAssentos.Size = new Size(80, 27);
             txtQuantidadeAssentos.TabIndex = 6;
             // 
-            // cmbAndar
+            // txtAndar
             // 
-            cmbAndar.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbAndar.FormattingEnabled = true;
-            cmbAndar.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
-            cmbAndar.Location = new Point(95, 192);
-            cmbAndar.Name = "cmbAndar";
-            cmbAndar.Size = new Size(151, 28);
-            cmbAndar.TabIndex = 9;
+            txtAndar.Location = new Point(95, 192);
+            txtAndar.Name = "txtAndar";
+            txtAndar.Size = new Size(80, 27);
+            txtAndar.TabIndex = 9;
             // 
             // FrmCadastroSala
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(582, 403);
-            Controls.Add(cmbAndar);
+            Controls.Add(txtAndar);
             Controls.Add(btnCancelar);
             Controls.Add(btnCadastrarSala);
             Controls.Add(txtQuantidadeAssentos);
@@ -151,6 +148,6 @@
         private Button btnCadastrarSala;
         private Button btnCancelar;
         private TextBox txtQuantidadeAssentos;
-        private ComboBox cmbAndar;
+        private TextBox txtAndar;
     }
 }

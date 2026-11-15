@@ -30,13 +30,25 @@ namespace SalaDeReunioes
                 return;
             }
 
-            if (cmbAndar.SelectedIndex == -1)
+            if (txtAndar.Text.Trim() == "")
             {
-                MessageBox.Show("Selecione o andar da sala.");
+                MessageBox.Show("Informe o andar da sala.");
                 return;
             }
 
-            int andar = int.Parse(cmbAndar.SelectedItem.ToString());
+            int andar;
+
+            if (!int.TryParse(txtAndar.Text, out andar))
+            {
+                MessageBox.Show("Digite um número válido para o andar.");
+                return;
+            }
+
+            if (andar < 0)
+            {
+                MessageBox.Show("O andar não pode ser negativo.");
+                return;
+            }
 
             if (txtQuantidadeAssentos.Text.Trim() == "")
             {

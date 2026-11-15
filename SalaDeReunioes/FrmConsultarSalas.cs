@@ -12,6 +12,11 @@ namespace SalaDeReunioes
 {
     public partial class FrmConsultarSalas : Form
     {
+        private int pgnAtual = 1;
+        private int qtddPorPagina = 10;
+        private int totalPaginas = 1;
+
+
         public FrmConsultarSalas()
         {
             InitializeComponent();
@@ -34,7 +39,30 @@ namespace SalaDeReunioes
                 }
             }
 
-            dgvSalas.DataSource = salasFiltradas;
+            totalPaginas = (salasFiltradas.Count + qtddPorPagina - 1) / qtddPorPagina;
+
+            if (totalPaginas == 0)
+            {
+                totalPaginas = 1;
+            }
+
+            if (pgnAtual > totalPaginas)
+            {
+                pgnAtual = totalPaginas;
+            }
+
+            lblPagina.Text = "Página " + pgnAtual + " de " + totalPaginas;
+
+            int inicio = (pgnAtual - 1) * qtddPorPagina;
+
+            List<Sala> salasPagina = new List<Sala>();
+
+            for (int i = inicio; i < inicio + qtddPorPagina && i < salasFiltradas.Count; i++)
+            {
+                salasPagina.Add(salasFiltradas[i]);
+            }
+
+            dgvSalas.DataSource = salasPagina;
         }
 
         private void FrmConsultarSalas_Load(object sender, EventArgs e)
@@ -44,7 +72,26 @@ namespace SalaDeReunioes
 
         private void txtPesquisarSala_TextChanged(object sender, EventArgs e)
         {
+            pgnAtual = 1;
             CarregarSalas(txtPesquisarSala.Text);
+        }
+
+        private void btnProxima_Click(object sender, EventArgs e)
+        {
+            if (pgnAtual < totalPaginas)
+            {
+                pgnAtual++;
+                CarregarSalas(txtPesquisarSala.Text);
+            }
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            if (pgnAtual > 1)
+            {
+                pgnAtual--;
+                CarregarSalas(txtPesquisarSala.Text);
+            }
         }
     }
 }

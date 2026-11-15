@@ -35,6 +35,9 @@
             colAssentos = new DataGridViewTextBoxColumn();
             label2 = new Label();
             txtPesquisarSala = new TextBox();
+            lblPagina = new Label();
+            btnAnterior = new Button();
+            btnProxima = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvSalas).BeginInit();
             SuspendLayout();
             // 
@@ -61,7 +64,7 @@
             dgvSalas.ReadOnly = true;
             dgvSalas.RowHeadersWidth = 51;
             dgvSalas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvSalas.Size = new Size(740, 318);
+            dgvSalas.Size = new Size(740, 277);
             dgvSalas.TabIndex = 1;
             // 
             // colNome
@@ -105,11 +108,43 @@
             txtPesquisarSala.TabIndex = 3;
             txtPesquisarSala.TextChanged += txtPesquisarSala_TextChanged;
             // 
+            // lblPagina
+            // 
+            lblPagina.AutoSize = true;
+            lblPagina.Location = new Point(384, 441);
+            lblPagina.Name = "lblPagina";
+            lblPagina.Size = new Size(98, 20);
+            lblPagina.TabIndex = 4;
+            lblPagina.Text = "Página 1 de 1";
+            // 
+            // btnAnterior
+            // 
+            btnAnterior.Location = new Point(284, 437);
+            btnAnterior.Name = "btnAnterior";
+            btnAnterior.Size = new Size(94, 29);
+            btnAnterior.TabIndex = 5;
+            btnAnterior.Text = "Anterior";
+            btnAnterior.UseVisualStyleBackColor = true;
+            btnAnterior.Click += btnAnterior_Click;
+            // 
+            // btnProxima
+            // 
+            btnProxima.Location = new Point(486, 437);
+            btnProxima.Name = "btnProxima";
+            btnProxima.Size = new Size(94, 29);
+            btnProxima.TabIndex = 6;
+            btnProxima.Text = "Próxima";
+            btnProxima.UseVisualStyleBackColor = true;
+            btnProxima.Click += btnProxima_Click;
+            // 
             // FrmConsultarSalas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(882, 503);
+            Controls.Add(btnProxima);
+            Controls.Add(btnAnterior);
+            Controls.Add(lblPagina);
             Controls.Add(txtPesquisarSala);
             Controls.Add(label2);
             Controls.Add(dgvSalas);
@@ -132,5 +167,8 @@
         private DataGridViewTextBoxColumn colAssentos;
         private Label label2;
         private TextBox txtPesquisarSala;
+        private Label lblPagina;
+        private Button btnAnterior;
+        private Button btnProxima;
     }
 }
