@@ -76,6 +76,7 @@
             btnGerenciarReservas.TabIndex = 3;
             btnGerenciarReservas.Text = "Gerenciar Reservas";
             btnGerenciarReservas.UseVisualStyleBackColor = true;
+            btnGerenciarReservas.Click += btnGerenciarReservas_Click;
             // 
             // btnRelatorios
             // 

@@ -20,5 +20,11 @@ namespace SalaDeReunioes
             FrmConsultarSalas formulario = new FrmConsultarSalas();
             formulario.ShowDialog();
         }
+
+        private void btnGerenciarReservas_Click(object sender, EventArgs e)
+        {
+            FrmGerenciarReservas formulario = new FrmGerenciarReservas();
+            formulario.ShowDialog();
+        }
     }
 }
