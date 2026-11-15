@@ -39,9 +39,10 @@ namespace SalaDeReunioes
             CarregarReservas();
         }
 
-        private void btnAtualizarReservas_Click(object sender, EventArgs e)
+        private void btnVerDisponibilidade_Click(object sender, EventArgs e)
         {
-            CarregarReservas();
+            FrmDisponibilidadeSalas formulario = new FrmDisponibilidadeSalas();
+            formulario.ShowDialog();
         }
 
         private void btnExcluirReserva_Click(object sender, EventArgs e)

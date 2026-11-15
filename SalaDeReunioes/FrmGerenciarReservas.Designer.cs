@@ -41,7 +41,7 @@
             btnAdicionarReserva = new Button();
             btnAlterarReserva = new Button();
             btnExcluirReserva = new Button();
-            btnAtualizarReservas = new Button();
+            btnVerDisponibilidade = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvReservas).BeginInit();
             SuspendLayout();
             // 
@@ -147,22 +147,22 @@
             btnExcluirReserva.UseVisualStyleBackColor = true;
             btnExcluirReserva.Click += btnExcluirReserva_Click;
             // 
-            // btnAtualizarReservas
+            // btnVerDisponibilidade
             // 
-            btnAtualizarReservas.Location = new Point(25, 374);
-            btnAtualizarReservas.Name = "btnAtualizarReservas";
-            btnAtualizarReservas.Size = new Size(171, 58);
-            btnAtualizarReservas.TabIndex = 5;
-            btnAtualizarReservas.Text = "Atualizar Lista";
-            btnAtualizarReservas.UseVisualStyleBackColor = true;
-            btnAtualizarReservas.Click += btnAtualizarReservas_Click;
+            btnVerDisponibilidade.Location = new Point(25, 374);
+            btnVerDisponibilidade.Name = "btnVerDisponibilidade";
+            btnVerDisponibilidade.Size = new Size(171, 58);
+            btnVerDisponibilidade.TabIndex = 5;
+            btnVerDisponibilidade.Text = "\tVer Disponibilidade de Salas";
+            btnVerDisponibilidade.UseVisualStyleBackColor = true;
+            btnVerDisponibilidade.Click += btnVerDisponibilidade_Click;
             // 
             // FrmGerenciarReservas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(882, 503);
-            Controls.Add(btnAtualizarReservas);
+            Controls.Add(btnVerDisponibilidade);
             Controls.Add(btnExcluirReserva);
             Controls.Add(btnAlterarReserva);
             Controls.Add(btnAdicionarReserva);
@@ -189,6 +189,6 @@
         private Button btnAdicionarReserva;
         private Button btnAlterarReserva;
         private Button btnExcluirReserva;
-        private Button btnAtualizarReservas;
+        private Button btnVerDisponibilidade;
     }
 }

@@ -10,5 +10,6 @@ namespace SalaDeReunioes.Models
         public string Nome { get; set; }
         public int Andar { get; set; }
         public int QtddAssentos { get; set; }
+        public decimal HorasLivres { get; set; }
     }
 }
