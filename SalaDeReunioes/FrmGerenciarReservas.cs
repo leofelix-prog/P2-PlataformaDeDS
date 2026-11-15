@@ -51,5 +51,12 @@ namespace SalaDeReunioes
 
             CarregarReservas();
         }
+
+        private void btnAlterarReserva_Click(object sender, EventArgs e)
+        {
+            FrmAlterarReserva formulario = new FrmAlterarReserva();
+            formulario.ShowDialog();
+            CarregarReservas();
+        }
     }
 }

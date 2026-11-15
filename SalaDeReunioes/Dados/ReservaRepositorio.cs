@@ -27,6 +27,26 @@ namespace SalaDeReunioes.Dados
             }
         }
 
+        public void Alterar(Reserva reserva)
+        {
+            using (NpgsqlConnection conexao = Conexao.GetConexao())
+            {
+                conexao.Open();
+
+                string sql = "UPDATE reservas SET sala_id = @sala_id, inicio = @inicio, fim = @fim WHERE id = @id";
+
+                using (NpgsqlCommand comando = new NpgsqlCommand(sql, conexao))
+                {
+                    comando.Parameters.AddWithValue("@sala_id", reserva.SalaId);
+                    comando.Parameters.AddWithValue("@inicio", reserva.Inicio);
+                    comando.Parameters.AddWithValue("@fim", reserva.Fim);
+                    comando.Parameters.AddWithValue("@id", reserva.Id);
+
+                    comando.ExecuteNonQuery();
+                }
+            }
+        }
+
         public void Excluir(int id)
         {
             using (NpgsqlConnection conexao = Conexao.GetConexao())

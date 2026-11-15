@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             lblTitulo = new Label();
             dgvReservas = new DataGridView();
+            btnExcluirReserva = new Button();
+            btnCancelar = new Button();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-            btnExcluirReserva = new Button();
-            btnCancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvReservas).BeginInit();
             SuspendLayout();
             // 
@@ -66,6 +68,26 @@
             dgvReservas.Size = new Size(758, 379);
             dgvReservas.TabIndex = 1;
             // 
+            // btnExcluirReserva
+            // 
+            btnExcluirReserva.Location = new Point(610, 475);
+            btnExcluirReserva.Name = "btnExcluirReserva";
+            btnExcluirReserva.Size = new Size(148, 50);
+            btnExcluirReserva.TabIndex = 2;
+            btnExcluirReserva.Text = "Excluir Reserva";
+            btnExcluirReserva.UseVisualStyleBackColor = true;
+            btnExcluirReserva.Click += btnExcluirReserva_Click;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(438, 475);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(148, 50);
+            btnCancelar.TabIndex = 3;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             dataGridViewTextBoxColumn1.DataPropertyName = "Inicio";
@@ -77,6 +99,8 @@
             // dataGridViewTextBoxColumn2
             // 
             dataGridViewTextBoxColumn2.DataPropertyName = "Inicio";
+            dataGridViewCellStyle1.Format = "HH:mm";
+            dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewTextBoxColumn2.HeaderText = "Horário Início";
             dataGridViewTextBoxColumn2.MinimumWidth = 6;
             dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
@@ -85,6 +109,8 @@
             // dataGridViewTextBoxColumn3
             // 
             dataGridViewTextBoxColumn3.DataPropertyName = "Fim";
+            dataGridViewCellStyle2.Format = "HH:mm";
+            dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewTextBoxColumn3.HeaderText = "Horário Fim";
             dataGridViewTextBoxColumn3.MinimumWidth = 6;
             dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
@@ -105,26 +131,6 @@
             dataGridViewTextBoxColumn5.MinimumWidth = 6;
             dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // btnExcluirReserva
-            // 
-            btnExcluirReserva.Location = new Point(610, 475);
-            btnExcluirReserva.Name = "btnExcluirReserva";
-            btnExcluirReserva.Size = new Size(148, 50);
-            btnExcluirReserva.TabIndex = 2;
-            btnExcluirReserva.Text = "Excluir Reserva";
-            btnExcluirReserva.UseVisualStyleBackColor = true;
-            btnExcluirReserva.Click += btnExcluirReserva_Click;
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.Location = new Point(438, 475);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(148, 50);
-            btnCancelar.TabIndex = 3;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
-            btnCancelar.Click += btnCancelar_Click;
             // 
             // FrmExcluirReserva
             // 

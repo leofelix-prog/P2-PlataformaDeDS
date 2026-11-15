@@ -135,6 +135,7 @@
             btnAlterarReserva.TabIndex = 3;
             btnAlterarReserva.Text = "Alterar Reserva";
             btnAlterarReserva.UseVisualStyleBackColor = true;
+            btnAlterarReserva.Click += btnAlterarReserva_Click;
             // 
             // btnExcluirReserva
             // 
