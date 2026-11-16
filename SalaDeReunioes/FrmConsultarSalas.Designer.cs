@@ -38,6 +38,8 @@
             lblPagina = new Label();
             btnAnterior = new Button();
             btnProxima = new Button();
+            btnAlterarSala = new Button();
+            btnExcluirSala = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvSalas).BeginInit();
             SuspendLayout();
             // 
@@ -58,13 +60,13 @@
             dgvSalas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvSalas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSalas.Columns.AddRange(new DataGridViewColumn[] { colNome, colAndar, colAssentos });
-            dgvSalas.Location = new Point(65, 145);
+            dgvSalas.Location = new Point(24, 144);
             dgvSalas.MultiSelect = false;
             dgvSalas.Name = "dgvSalas";
             dgvSalas.ReadOnly = true;
             dgvSalas.RowHeadersWidth = 51;
             dgvSalas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvSalas.Size = new Size(740, 277);
+            dgvSalas.Size = new Size(629, 277);
             dgvSalas.TabIndex = 1;
             // 
             // colNome
@@ -94,7 +96,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(65, 109);
+            label2.Location = new Point(24, 108);
             label2.Name = "label2";
             label2.Size = new Size(102, 20);
             label2.TabIndex = 2;
@@ -102,7 +104,7 @@
             // 
             // txtPesquisarSala
             // 
-            txtPesquisarSala.Location = new Point(173, 106);
+            txtPesquisarSala.Location = new Point(132, 105);
             txtPesquisarSala.Name = "txtPesquisarSala";
             txtPesquisarSala.Size = new Size(125, 27);
             txtPesquisarSala.TabIndex = 3;
@@ -111,7 +113,7 @@
             // lblPagina
             // 
             lblPagina.AutoSize = true;
-            lblPagina.Location = new Point(384, 441);
+            lblPagina.Location = new Point(281, 436);
             lblPagina.Name = "lblPagina";
             lblPagina.Size = new Size(98, 20);
             lblPagina.TabIndex = 4;
@@ -119,7 +121,7 @@
             // 
             // btnAnterior
             // 
-            btnAnterior.Location = new Point(284, 437);
+            btnAnterior.Location = new Point(181, 432);
             btnAnterior.Name = "btnAnterior";
             btnAnterior.Size = new Size(94, 29);
             btnAnterior.TabIndex = 5;
@@ -129,7 +131,7 @@
             // 
             // btnProxima
             // 
-            btnProxima.Location = new Point(486, 437);
+            btnProxima.Location = new Point(383, 432);
             btnProxima.Name = "btnProxima";
             btnProxima.Size = new Size(94, 29);
             btnProxima.TabIndex = 6;
@@ -137,11 +139,33 @@
             btnProxima.UseVisualStyleBackColor = true;
             btnProxima.Click += btnProxima_Click;
             // 
+            // btnAlterarSala
+            // 
+            btnAlterarSala.Location = new Point(735, 191);
+            btnAlterarSala.Name = "btnAlterarSala";
+            btnAlterarSala.Size = new Size(94, 29);
+            btnAlterarSala.TabIndex = 7;
+            btnAlterarSala.Text = "Alterar Sala";
+            btnAlterarSala.UseVisualStyleBackColor = true;
+            btnAlterarSala.Click += btnAlterarSala_Click;
+            // 
+            // btnExcluirSala
+            // 
+            btnExcluirSala.Location = new Point(736, 261);
+            btnExcluirSala.Name = "btnExcluirSala";
+            btnExcluirSala.Size = new Size(94, 29);
+            btnExcluirSala.TabIndex = 8;
+            btnExcluirSala.Text = "Excluir Sala";
+            btnExcluirSala.UseVisualStyleBackColor = true;
+            btnExcluirSala.Click += btnExcluirSala_Click;
+            // 
             // FrmConsultarSalas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(882, 503);
+            Controls.Add(btnExcluirSala);
+            Controls.Add(btnAlterarSala);
             Controls.Add(btnProxima);
             Controls.Add(btnAnterior);
             Controls.Add(lblPagina);
@@ -170,5 +194,7 @@
         private Label lblPagina;
         private Button btnAnterior;
         private Button btnProxima;
+        private Button btnAlterarSala;
+        private Button btnExcluirSala;
     }
 }

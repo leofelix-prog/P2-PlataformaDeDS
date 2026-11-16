@@ -58,5 +58,42 @@ namespace SalaDeReunioes.Dados
 
             return salas;
         }
+
+        public void Alterar(Sala sala)
+        {
+            using (NpgsqlConnection conexao = Conexao.GetConexao())
+            {
+                conexao.Open();
+
+                string sql = "UPDATE salas SET nome = @nome, andar = @andar, qtddassentos = @qtddassentos WHERE id = @id";
+
+                using (NpgsqlCommand comando = new NpgsqlCommand(sql, conexao))
+                {
+                    comando.Parameters.AddWithValue("@nome", sala.Nome);
+                    comando.Parameters.AddWithValue("@andar", sala.Andar);
+                    comando.Parameters.AddWithValue("@qtddassentos", sala.QtddAssentos);
+                    comando.Parameters.AddWithValue("@id", sala.Id);
+
+                    comando.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void Excluir(int id)
+        {
+            using (NpgsqlConnection conexao = Conexao.GetConexao())
+            {
+                conexao.Open();
+
+                string sql = "DELETE FROM salas WHERE id = @id";
+
+                using (NpgsqlCommand comando = new NpgsqlCommand(sql, conexao))
+                {
+                    comando.Parameters.AddWithValue("@id", id);
+
+                    comando.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

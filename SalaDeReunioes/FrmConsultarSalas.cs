@@ -93,5 +93,66 @@ namespace SalaDeReunioes
                 CarregarSalas(txtPesquisarSala.Text);
             }
         }
+
+        private void btnAlterarSala_Click(object sender, EventArgs e)
+        {
+            if (dgvSalas.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione uma sala para alterar.");
+                return;
+            }
+
+            if (dgvSalas.SelectedRows[0].DataBoundItem is not Sala salaSelecionada)
+            {
+                MessageBox.Show("Não foi possível identificar a sala selecionada.");
+                return;
+            }
+
+            FrmAlterarSala formulario = new FrmAlterarSala(salaSelecionada);
+
+            formulario.ShowDialog();
+
+            CarregarSalas(txtPesquisarSala.Text);
+        }
+
+        private void btnExcluirSala_Click(object sender, EventArgs e)
+        {
+            if (dgvSalas.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione uma sala para excluir.");
+                return;
+            }
+
+            if (dgvSalas.SelectedRows[0].DataBoundItem is not Sala salaSelecionada)
+            {
+                MessageBox.Show("Não foi possível identificar a sala selecionada.");
+                return;
+            }
+
+            DialogResult resposta = MessageBox.Show(
+                "Tem certeza que deseja excluir a sala " + salaSelecionada.Nome + "?",
+                "Confirmar exclusão",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (resposta == DialogResult.Yes)
+            {
+                try
+                {
+                    SalaRepositorio repositorio = new SalaRepositorio();
+
+                    repositorio.Excluir(salaSelecionada.Id);
+
+                    MessageBox.Show("Sala excluída com sucesso!");
+
+                    CarregarSalas(txtPesquisarSala.Text);
+                }
+                catch (Npgsql.PostgresException ex) when (ex.SqlState == "23503")
+                {
+                    MessageBox.Show("Não é possível excluir esta sala porque existem reservas vinculadas a ela.");
+                }
+            }
+        }
     }
 }

@@ -93,18 +93,20 @@
             // lblTituloReservasRecentes
             // 
             lblTituloReservasRecentes.AutoSize = true;
-            lblTituloReservasRecentes.Location = new Point(53, 325);
+            lblTituloReservasRecentes.Font = new Font("Segoe UI", 12F);
+            lblTituloReservasRecentes.Location = new Point(12, 488);
             lblTituloReservasRecentes.Name = "lblTituloReservasRecentes";
-            lblTituloReservasRecentes.Size = new Size(275, 20);
+            lblTituloReservasRecentes.Size = new Size(360, 28);
             lblTituloReservasRecentes.TabIndex = 5;
             lblTituloReservasRecentes.Text = "Reservas cadastradas nos últimos 7 dias:";
             // 
             // lblQtddReservasRecentes
             // 
             lblQtddReservasRecentes.AutoSize = true;
-            lblQtddReservasRecentes.Location = new Point(146, 244);
+            lblQtddReservasRecentes.Font = new Font("Segoe UI", 40F);
+            lblQtddReservasRecentes.Location = new Point(378, 455);
             lblQtddReservasRecentes.Name = "lblQtddReservasRecentes";
-            lblQtddReservasRecentes.Size = new Size(17, 20);
+            lblQtddReservasRecentes.Size = new Size(74, 89);
             lblQtddReservasRecentes.TabIndex = 6;
             lblQtddReservasRecentes.Text = "0";
             // 
