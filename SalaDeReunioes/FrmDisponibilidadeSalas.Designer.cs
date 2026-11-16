@@ -87,12 +87,13 @@
             // 
             // btnAplicar
             // 
+            btnAplicar.BackColor = SystemColors.Info;
             btnAplicar.Location = new Point(636, 109);
             btnAplicar.Name = "btnAplicar";
             btnAplicar.Size = new Size(118, 45);
             btnAplicar.TabIndex = 5;
             btnAplicar.Text = "Aplicar";
-            btnAplicar.UseVisualStyleBackColor = true;
+            btnAplicar.UseVisualStyleBackColor = false;
             btnAplicar.Click += btnAplicar_Click;
             // 
             // dgvDisponibilidade
@@ -139,6 +140,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.InactiveBorder;
             ClientSize = new Size(782, 453);
             Controls.Add(dgvDisponibilidade);
             Controls.Add(btnAplicar);

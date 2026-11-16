@@ -85,22 +85,24 @@
             // 
             // btnCadastrarSala
             // 
+            btnCadastrarSala.BackColor = SystemColors.Info;
             btnCadastrarSala.Location = new Point(410, 327);
             btnCadastrarSala.Name = "btnCadastrarSala";
             btnCadastrarSala.Size = new Size(141, 40);
             btnCadastrarSala.TabIndex = 7;
             btnCadastrarSala.Text = "Cadastrar Sala";
-            btnCadastrarSala.UseVisualStyleBackColor = true;
+            btnCadastrarSala.UseVisualStyleBackColor = false;
             btnCadastrarSala.Click += btnCadastrarSala_Click;
             // 
             // btnCancelar
             // 
+            btnCancelar.BackColor = SystemColors.ControlDark;
             btnCancelar.Location = new Point(242, 327);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(141, 40);
             btnCancelar.TabIndex = 8;
             btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
             // txtQuantidadeAssentos

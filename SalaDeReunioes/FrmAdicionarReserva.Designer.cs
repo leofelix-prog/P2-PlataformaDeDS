@@ -130,28 +130,33 @@
             // 
             // btnCadastrarReserva
             // 
+            btnCadastrarReserva.BackColor = SystemColors.Info;
+            btnCadastrarReserva.Font = new Font("Segoe UI", 11F);
             btnCadastrarReserva.Location = new Point(229, 429);
             btnCadastrarReserva.Name = "btnCadastrarReserva";
-            btnCadastrarReserva.Size = new Size(164, 77);
+            btnCadastrarReserva.Size = new Size(172, 77);
             btnCadastrarReserva.TabIndex = 9;
             btnCadastrarReserva.Text = "Cadastrar Reserva";
-            btnCadastrarReserva.UseVisualStyleBackColor = true;
+            btnCadastrarReserva.UseVisualStyleBackColor = false;
             btnCadastrarReserva.Click += btnCadastrarReserva_Click;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(33, 429);
+            btnCancelar.BackColor = SystemColors.ControlDark;
+            btnCancelar.Font = new Font("Segoe UI", 11F);
+            btnCancelar.Location = new Point(28, 429);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(164, 77);
+            btnCancelar.Size = new Size(172, 77);
             btnCancelar.TabIndex = 10;
             btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
             // FrmAdicionarReserva
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(432, 603);
             Controls.Add(btnCancelar);
             Controls.Add(btnCadastrarReserva);

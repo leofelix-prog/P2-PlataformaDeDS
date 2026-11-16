@@ -119,42 +119,46 @@
             // 
             // btnAdicionarReserva
             // 
+            btnAdicionarReserva.BackColor = SystemColors.Info;
             btnAdicionarReserva.Location = new Point(25, 114);
             btnAdicionarReserva.Name = "btnAdicionarReserva";
             btnAdicionarReserva.Size = new Size(171, 58);
             btnAdicionarReserva.TabIndex = 2;
             btnAdicionarReserva.Text = "Adicionar Reserva";
-            btnAdicionarReserva.UseVisualStyleBackColor = true;
+            btnAdicionarReserva.UseVisualStyleBackColor = false;
             btnAdicionarReserva.Click += btnAdicionarReserva_Click;
             // 
             // btnAlterarReserva
             // 
+            btnAlterarReserva.BackColor = SystemColors.Info;
             btnAlterarReserva.Location = new Point(25, 198);
             btnAlterarReserva.Name = "btnAlterarReserva";
             btnAlterarReserva.Size = new Size(171, 58);
             btnAlterarReserva.TabIndex = 3;
             btnAlterarReserva.Text = "Alterar Reserva";
-            btnAlterarReserva.UseVisualStyleBackColor = true;
+            btnAlterarReserva.UseVisualStyleBackColor = false;
             btnAlterarReserva.Click += btnAlterarReserva_Click;
             // 
             // btnExcluirReserva
             // 
+            btnExcluirReserva.BackColor = SystemColors.Info;
             btnExcluirReserva.Location = new Point(25, 286);
             btnExcluirReserva.Name = "btnExcluirReserva";
             btnExcluirReserva.Size = new Size(171, 58);
             btnExcluirReserva.TabIndex = 4;
             btnExcluirReserva.Text = "Excluir Reserva";
-            btnExcluirReserva.UseVisualStyleBackColor = true;
+            btnExcluirReserva.UseVisualStyleBackColor = false;
             btnExcluirReserva.Click += btnExcluirReserva_Click;
             // 
             // btnVerDisponibilidade
             // 
+            btnVerDisponibilidade.BackColor = SystemColors.Info;
             btnVerDisponibilidade.Location = new Point(25, 374);
             btnVerDisponibilidade.Name = "btnVerDisponibilidade";
             btnVerDisponibilidade.Size = new Size(171, 58);
             btnVerDisponibilidade.TabIndex = 5;
             btnVerDisponibilidade.Text = "\tVer Disponibilidade de Salas";
-            btnVerDisponibilidade.UseVisualStyleBackColor = true;
+            btnVerDisponibilidade.UseVisualStyleBackColor = false;
             btnVerDisponibilidade.Click += btnVerDisponibilidade_Click;
             // 
             // FrmGerenciarReservas

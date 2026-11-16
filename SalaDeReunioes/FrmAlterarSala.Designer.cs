@@ -89,22 +89,24 @@
             // 
             // btnSalvar
             // 
+            btnSalvar.BackColor = SystemColors.Info;
             btnSalvar.Location = new Point(225, 393);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(156, 63);
             btnSalvar.TabIndex = 6;
             btnSalvar.Text = "Salvar Alterações";
-            btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.UseVisualStyleBackColor = false;
             btnSalvar.Click += btnSalvar_Click;
             // 
             // btnCancelar
             // 
+            btnCancelar.BackColor = SystemColors.ControlDark;
             btnCancelar.Location = new Point(48, 393);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(156, 63);
             btnCancelar.TabIndex = 7;
             btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
             // label4

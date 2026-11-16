@@ -35,6 +35,7 @@
             btnRelatorios = new Button();
             lblTituloReservasRecentes = new Label();
             lblQtddReservasRecentes = new Label();
+            btnSair = new Button();
             SuspendLayout();
             // 
             // label1
@@ -49,46 +50,50 @@
             // 
             // btnConsultarSalas
             // 
+            btnConsultarSalas.BackColor = SystemColors.Info;
             btnConsultarSalas.Font = new Font("Segoe UI", 11F);
-            btnConsultarSalas.Location = new Point(394, 124);
+            btnConsultarSalas.Location = new Point(394, 108);
             btnConsultarSalas.Name = "btnConsultarSalas";
             btnConsultarSalas.Size = new Size(200, 40);
             btnConsultarSalas.TabIndex = 1;
             btnConsultarSalas.Text = "Consultar Salas";
-            btnConsultarSalas.UseVisualStyleBackColor = true;
+            btnConsultarSalas.UseVisualStyleBackColor = false;
             btnConsultarSalas.Click += btnConsultarSalas_Click;
             // 
             // btnCadastrarSala
             // 
+            btnCadastrarSala.BackColor = SystemColors.Info;
             btnCadastrarSala.Font = new Font("Segoe UI", 11F);
-            btnCadastrarSala.Location = new Point(394, 202);
+            btnCadastrarSala.Location = new Point(394, 186);
             btnCadastrarSala.Name = "btnCadastrarSala";
             btnCadastrarSala.Size = new Size(200, 40);
             btnCadastrarSala.TabIndex = 2;
             btnCadastrarSala.Text = "Cadastrar Sala";
-            btnCadastrarSala.UseVisualStyleBackColor = true;
+            btnCadastrarSala.UseVisualStyleBackColor = false;
             btnCadastrarSala.Click += btnCadastrarSala_Click;
             // 
             // btnGerenciarReservas
             // 
+            btnGerenciarReservas.BackColor = SystemColors.Info;
             btnGerenciarReservas.Font = new Font("Segoe UI", 11F);
-            btnGerenciarReservas.Location = new Point(394, 280);
+            btnGerenciarReservas.Location = new Point(394, 264);
             btnGerenciarReservas.Name = "btnGerenciarReservas";
             btnGerenciarReservas.Size = new Size(200, 40);
             btnGerenciarReservas.TabIndex = 3;
             btnGerenciarReservas.Text = "Gerenciar Reservas";
-            btnGerenciarReservas.UseVisualStyleBackColor = true;
+            btnGerenciarReservas.UseVisualStyleBackColor = false;
             btnGerenciarReservas.Click += btnGerenciarReservas_Click;
             // 
             // btnRelatorios
             // 
+            btnRelatorios.BackColor = SystemColors.Info;
             btnRelatorios.Font = new Font("Segoe UI", 11F);
-            btnRelatorios.Location = new Point(394, 355);
+            btnRelatorios.Location = new Point(394, 339);
             btnRelatorios.Name = "btnRelatorios";
             btnRelatorios.Size = new Size(200, 40);
             btnRelatorios.TabIndex = 4;
             btnRelatorios.Text = "Relatórios";
-            btnRelatorios.UseVisualStyleBackColor = true;
+            btnRelatorios.UseVisualStyleBackColor = false;
             // 
             // lblTituloReservasRecentes
             // 
@@ -109,12 +114,27 @@
             lblQtddReservasRecentes.Size = new Size(74, 89);
             lblQtddReservasRecentes.TabIndex = 6;
             lblQtddReservasRecentes.Text = "0";
+            lblQtddReservasRecentes.Click += lblQtddReservasRecentes_Click;
+            // 
+            // btnSair
+            // 
+            btnSair.BackColor = SystemColors.ButtonFace;
+            btnSair.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnSair.Location = new Point(394, 412);
+            btnSair.Name = "btnSair";
+            btnSair.Size = new Size(200, 40);
+            btnSair.TabIndex = 7;
+            btnSair.Text = "Sair";
+            btnSair.UseVisualStyleBackColor = false;
+            btnSair.Click += btnSair_Click;
             // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlDark;
             ClientSize = new Size(999, 553);
+            Controls.Add(btnSair);
             Controls.Add(lblQtddReservasRecentes);
             Controls.Add(lblTituloReservasRecentes);
             Controls.Add(btnRelatorios);
@@ -139,5 +159,6 @@
         private Button btnRelatorios;
         private Label lblTituloReservasRecentes;
         private Label lblQtddReservasRecentes;
+        private Button btnSair;
     }
 }

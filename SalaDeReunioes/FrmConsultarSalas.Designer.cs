@@ -66,7 +66,7 @@
             dgvSalas.ReadOnly = true;
             dgvSalas.RowHeadersWidth = 51;
             dgvSalas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvSalas.Size = new Size(629, 277);
+            dgvSalas.Size = new Size(629, 320);
             dgvSalas.TabIndex = 1;
             // 
             // colNome
@@ -106,14 +106,14 @@
             // 
             txtPesquisarSala.Location = new Point(132, 105);
             txtPesquisarSala.Name = "txtPesquisarSala";
-            txtPesquisarSala.Size = new Size(125, 27);
+            txtPesquisarSala.Size = new Size(203, 27);
             txtPesquisarSala.TabIndex = 3;
             txtPesquisarSala.TextChanged += txtPesquisarSala_TextChanged;
             // 
             // lblPagina
             // 
             lblPagina.AutoSize = true;
-            lblPagina.Location = new Point(281, 436);
+            lblPagina.Location = new Point(271, 479);
             lblPagina.Name = "lblPagina";
             lblPagina.Size = new Size(98, 20);
             lblPagina.TabIndex = 4;
@@ -121,49 +121,54 @@
             // 
             // btnAnterior
             // 
-            btnAnterior.Location = new Point(181, 432);
+            btnAnterior.BackColor = SystemColors.GradientActiveCaption;
+            btnAnterior.Location = new Point(171, 475);
             btnAnterior.Name = "btnAnterior";
             btnAnterior.Size = new Size(94, 29);
             btnAnterior.TabIndex = 5;
             btnAnterior.Text = "Anterior";
-            btnAnterior.UseVisualStyleBackColor = true;
+            btnAnterior.UseVisualStyleBackColor = false;
             btnAnterior.Click += btnAnterior_Click;
             // 
             // btnProxima
             // 
-            btnProxima.Location = new Point(383, 432);
+            btnProxima.BackColor = SystemColors.GradientActiveCaption;
+            btnProxima.Location = new Point(373, 475);
             btnProxima.Name = "btnProxima";
             btnProxima.Size = new Size(94, 29);
             btnProxima.TabIndex = 6;
             btnProxima.Text = "Próxima";
-            btnProxima.UseVisualStyleBackColor = true;
+            btnProxima.UseVisualStyleBackColor = false;
             btnProxima.Click += btnProxima_Click;
             // 
             // btnAlterarSala
             // 
-            btnAlterarSala.Location = new Point(735, 191);
+            btnAlterarSala.BackColor = SystemColors.Info;
+            btnAlterarSala.Location = new Point(699, 202);
             btnAlterarSala.Name = "btnAlterarSala";
-            btnAlterarSala.Size = new Size(94, 29);
+            btnAlterarSala.Size = new Size(146, 48);
             btnAlterarSala.TabIndex = 7;
             btnAlterarSala.Text = "Alterar Sala";
-            btnAlterarSala.UseVisualStyleBackColor = true;
+            btnAlterarSala.UseVisualStyleBackColor = false;
             btnAlterarSala.Click += btnAlterarSala_Click;
             // 
             // btnExcluirSala
             // 
-            btnExcluirSala.Location = new Point(736, 261);
+            btnExcluirSala.BackColor = SystemColors.Info;
+            btnExcluirSala.Location = new Point(699, 302);
             btnExcluirSala.Name = "btnExcluirSala";
-            btnExcluirSala.Size = new Size(94, 29);
+            btnExcluirSala.Size = new Size(146, 49);
             btnExcluirSala.TabIndex = 8;
             btnExcluirSala.Text = "Excluir Sala";
-            btnExcluirSala.UseVisualStyleBackColor = true;
+            btnExcluirSala.UseVisualStyleBackColor = false;
             btnExcluirSala.Click += btnExcluirSala_Click;
             // 
             // FrmConsultarSalas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(882, 503);
+            BackColor = SystemColors.InactiveBorder;
+            ClientSize = new Size(882, 565);
             Controls.Add(btnExcluirSala);
             Controls.Add(btnAlterarSala);
             Controls.Add(btnProxima);

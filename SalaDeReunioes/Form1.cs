@@ -41,5 +41,15 @@ namespace SalaDeReunioes
         {
             AtualizarReservasRecentes();
         }
+
+        private void lblQtddReservasRecentes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

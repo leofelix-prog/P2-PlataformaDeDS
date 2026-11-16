@@ -30,13 +30,9 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             label1 = new Label();
             dgvReservas = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
             lblSala = new Label();
             cmbSala = new ComboBox();
             lblData = new Label();
@@ -48,6 +44,11 @@
             label4 = new Label();
             btnCancelar = new Button();
             btnSalvarAlteracoes = new Button();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvReservas).BeginInit();
             SuspendLayout();
             // 
@@ -77,50 +78,6 @@
             dgvReservas.Size = new Size(646, 355);
             dgvReservas.TabIndex = 1;
             dgvReservas.SelectionChanged += dgvReservas_SelectionChanged;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.DataPropertyName = "Inicio";
-            dataGridViewTextBoxColumn1.HeaderText = "Data";
-            dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.DataPropertyName = "Inicio";
-            dataGridViewCellStyle1.Format = "HH:mm";
-            dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewTextBoxColumn2.HeaderText = "Horário Início";
-            dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            dataGridViewTextBoxColumn3.DataPropertyName = "Fim";
-            dataGridViewCellStyle2.Format = "HH:mm";
-            dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewTextBoxColumn3.HeaderText = "Horário Fim";
-            dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            dataGridViewTextBoxColumn4.DataPropertyName = "NomeSala";
-            dataGridViewTextBoxColumn4.HeaderText = "Sala";
-            dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            dataGridViewTextBoxColumn5.DataPropertyName = "AndarSala";
-            dataGridViewTextBoxColumn5.HeaderText = "Andar";
-            dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // lblSala
             // 
@@ -207,28 +164,77 @@
             // 
             // btnCancelar
             // 
+            btnCancelar.BackColor = SystemColors.ControlDark;
             btnCancelar.Location = new Point(571, 475);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(189, 54);
             btnCancelar.TabIndex = 11;
             btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
             // btnSalvarAlteracoes
             // 
+            btnSalvarAlteracoes.BackColor = SystemColors.Info;
             btnSalvarAlteracoes.Location = new Point(781, 475);
             btnSalvarAlteracoes.Name = "btnSalvarAlteracoes";
             btnSalvarAlteracoes.Size = new Size(189, 54);
             btnSalvarAlteracoes.TabIndex = 12;
             btnSalvarAlteracoes.Text = "Salvar Alterações";
-            btnSalvarAlteracoes.UseVisualStyleBackColor = true;
+            btnSalvarAlteracoes.UseVisualStyleBackColor = false;
             btnSalvarAlteracoes.Click += btnSalvarAlteracoes_Click;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.DataPropertyName = "Inicio";
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+            dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewTextBoxColumn1.HeaderText = "Data";
+            dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.DataPropertyName = "Inicio";
+            dataGridViewCellStyle2.Format = "HH:mm";
+            dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewTextBoxColumn2.HeaderText = "Horário Início";
+            dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.DataPropertyName = "Fim";
+            dataGridViewCellStyle3.Format = "HH:mm";
+            dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewTextBoxColumn3.HeaderText = "Horário Fim";
+            dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.DataPropertyName = "NomeSala";
+            dataGridViewTextBoxColumn4.HeaderText = "Sala";
+            dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            dataGridViewTextBoxColumn5.DataPropertyName = "AndarSala";
+            dataGridViewTextBoxColumn5.HeaderText = "Andar";
+            dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // FrmAlterarReserva
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.InactiveBorder;
             ClientSize = new Size(982, 553);
             Controls.Add(btnSalvarAlteracoes);
             Controls.Add(btnCancelar);
