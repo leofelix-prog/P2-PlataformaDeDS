@@ -33,6 +33,8 @@
             btnCadastrarSala = new Button();
             btnGerenciarReservas = new Button();
             btnRelatorios = new Button();
+            lblTituloReservasRecentes = new Label();
+            lblQtddReservasRecentes = new Label();
             SuspendLayout();
             // 
             // label1
@@ -88,11 +90,31 @@
             btnRelatorios.Text = "Relatórios";
             btnRelatorios.UseVisualStyleBackColor = true;
             // 
+            // lblTituloReservasRecentes
+            // 
+            lblTituloReservasRecentes.AutoSize = true;
+            lblTituloReservasRecentes.Location = new Point(53, 325);
+            lblTituloReservasRecentes.Name = "lblTituloReservasRecentes";
+            lblTituloReservasRecentes.Size = new Size(275, 20);
+            lblTituloReservasRecentes.TabIndex = 5;
+            lblTituloReservasRecentes.Text = "Reservas cadastradas nos últimos 7 dias:";
+            // 
+            // lblQtddReservasRecentes
+            // 
+            lblQtddReservasRecentes.AutoSize = true;
+            lblQtddReservasRecentes.Location = new Point(146, 244);
+            lblQtddReservasRecentes.Name = "lblQtddReservasRecentes";
+            lblQtddReservasRecentes.Size = new Size(17, 20);
+            lblQtddReservasRecentes.TabIndex = 6;
+            lblQtddReservasRecentes.Text = "0";
+            // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(999, 553);
+            Controls.Add(lblQtddReservasRecentes);
+            Controls.Add(lblTituloReservasRecentes);
             Controls.Add(btnRelatorios);
             Controls.Add(btnGerenciarReservas);
             Controls.Add(btnCadastrarSala);
@@ -101,6 +123,7 @@
             Name = "FrmPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sistema de Gerenciamento de Salas de Reunião";
+            Activated += FrmPrincipal_Activated;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -112,5 +135,7 @@
         private Button btnCadastrarSala;
         private Button btnGerenciarReservas;
         private Button btnRelatorios;
+        private Label lblTituloReservasRecentes;
+        private Label lblQtddReservasRecentes;
     }
 }

@@ -7,6 +7,7 @@ namespace SalaDeReunioes
         public FrmPrincipal()
         {
             InitializeComponent();
+            AtualizarReservasRecentes();
         }
 
         private void btnCadastrarSala_Click(object sender, EventArgs e)
@@ -25,6 +26,20 @@ namespace SalaDeReunioes
         {
             FrmGerenciarReservas formulario = new FrmGerenciarReservas();
             formulario.ShowDialog();
+        }
+
+        private void AtualizarReservasRecentes()
+        {
+            ReservaRepositorio repositorio = new ReservaRepositorio();
+
+            int quantidade = repositorio.ReservasUltimos7Dias();
+
+            lblQtddReservasRecentes.Text = quantidade.ToString();
+        }
+
+        private void FrmPrincipal_Activated(object sender, EventArgs e)
+        {
+            AtualizarReservasRecentes();
         }
     }
 }

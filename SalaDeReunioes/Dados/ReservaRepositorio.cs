@@ -64,6 +64,21 @@ namespace SalaDeReunioes.Dados
             }
         }
 
+        public int ReservasUltimos7Dias()
+        {
+            using (NpgsqlConnection conexao = Conexao.GetConexao())
+            {
+                conexao.Open();
+
+                string sql = "SELECT COUNT(*) FROM reservas WHERE data_cadastro >= CURRENT_TIMESTAMP - INTERVAL '7 days'";
+
+                using (NpgsqlCommand comando = new NpgsqlCommand(sql, conexao))
+                {
+                    return Convert.ToInt32(comando.ExecuteScalar());
+                }
+            }
+        }
+
         public List<Reserva> ConsultarTodos()
         {
             List<Reserva> reservas = new List<Reserva>();
