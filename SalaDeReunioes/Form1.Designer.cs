@@ -32,7 +32,6 @@
             btnConsultarSalas = new Button();
             btnCadastrarSala = new Button();
             btnGerenciarReservas = new Button();
-            btnRelatorios = new Button();
             lblTituloReservasRecentes = new Label();
             lblQtddReservasRecentes = new Label();
             btnSair = new Button();
@@ -41,10 +40,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            label1.Location = new Point(366, 33);
+            label1.Font = new Font("Segoe UI", 30F, FontStyle.Bold);
+            label1.Location = new Point(297, 21);
             label1.Name = "label1";
-            label1.Size = new Size(254, 41);
+            label1.Size = new Size(424, 67);
             label1.TabIndex = 0;
             label1.Text = "Salas de Reunião";
             // 
@@ -52,7 +51,7 @@
             // 
             btnConsultarSalas.BackColor = SystemColors.Info;
             btnConsultarSalas.Font = new Font("Segoe UI", 11F);
-            btnConsultarSalas.Location = new Point(394, 108);
+            btnConsultarSalas.Location = new Point(394, 123);
             btnConsultarSalas.Name = "btnConsultarSalas";
             btnConsultarSalas.Size = new Size(200, 40);
             btnConsultarSalas.TabIndex = 1;
@@ -64,7 +63,7 @@
             // 
             btnCadastrarSala.BackColor = SystemColors.Info;
             btnCadastrarSala.Font = new Font("Segoe UI", 11F);
-            btnCadastrarSala.Location = new Point(394, 186);
+            btnCadastrarSala.Location = new Point(394, 201);
             btnCadastrarSala.Name = "btnCadastrarSala";
             btnCadastrarSala.Size = new Size(200, 40);
             btnCadastrarSala.TabIndex = 2;
@@ -76,24 +75,13 @@
             // 
             btnGerenciarReservas.BackColor = SystemColors.Info;
             btnGerenciarReservas.Font = new Font("Segoe UI", 11F);
-            btnGerenciarReservas.Location = new Point(394, 264);
+            btnGerenciarReservas.Location = new Point(394, 279);
             btnGerenciarReservas.Name = "btnGerenciarReservas";
             btnGerenciarReservas.Size = new Size(200, 40);
             btnGerenciarReservas.TabIndex = 3;
             btnGerenciarReservas.Text = "Gerenciar Reservas";
             btnGerenciarReservas.UseVisualStyleBackColor = false;
             btnGerenciarReservas.Click += btnGerenciarReservas_Click;
-            // 
-            // btnRelatorios
-            // 
-            btnRelatorios.BackColor = SystemColors.Info;
-            btnRelatorios.Font = new Font("Segoe UI", 11F);
-            btnRelatorios.Location = new Point(394, 339);
-            btnRelatorios.Name = "btnRelatorios";
-            btnRelatorios.Size = new Size(200, 40);
-            btnRelatorios.TabIndex = 4;
-            btnRelatorios.Text = "Relatórios";
-            btnRelatorios.UseVisualStyleBackColor = false;
             // 
             // lblTituloReservasRecentes
             // 
@@ -120,7 +108,7 @@
             // 
             btnSair.BackColor = SystemColors.ButtonFace;
             btnSair.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnSair.Location = new Point(394, 412);
+            btnSair.Location = new Point(394, 370);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(200, 40);
             btnSair.TabIndex = 7;
@@ -137,7 +125,6 @@
             Controls.Add(btnSair);
             Controls.Add(lblQtddReservasRecentes);
             Controls.Add(lblTituloReservasRecentes);
-            Controls.Add(btnRelatorios);
             Controls.Add(btnGerenciarReservas);
             Controls.Add(btnCadastrarSala);
             Controls.Add(btnConsultarSalas);
@@ -156,7 +143,6 @@
         private Button btnConsultarSalas;
         private Button btnCadastrarSala;
         private Button btnGerenciarReservas;
-        private Button btnRelatorios;
         private Label lblTituloReservasRecentes;
         private Label lblQtddReservasRecentes;
         private Button btnSair;
